@@ -3,9 +3,9 @@
 <package format="3">
   <name>turtle_control</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>A simple node to control the turtle in turtle_sim</description>
   <maintainer email="cwkwong@ucdavis.edu">dannykcw</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
