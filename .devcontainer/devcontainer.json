@@ -1,0 +1,31 @@
+{
+  "name": "ROS 2 jazzy",
+  "image": "ghcr.io/space-and-satellite-systems-uc-davis/ros-container:jazzy",
+  "remoteEnv": {
+    "ROS_DISTRO": "jazzy",
+    "DISPLAY": ":1"
+  },
+  "forwardPorts": [5901],
+  "portsAttributes": {
+    "5901": {
+      "label": "VNC",
+      "onAutoForward": "notify"
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-python.python",
+        "ms-vscode.cmake-tools",
+        "ranch-hand-robotics.rde-pack",
+
+      ]
+    }
+  },
+  "workspaceFolder": "/workspace",
+  "postStartCommand": "if command -v start-vnc.sh &> /dev/null; then start-vnc.sh; fi"
+}
